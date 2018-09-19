@@ -47,7 +47,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="0XM-y9-sOw">
-                                <rect key="frame" x="187.5" y="314" width="0.0" height="0.0"/>
+                                <rect key="frame" x="50" y="314" width="275" height="0.0"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -60,6 +60,8 @@
                             <constraint firstItem="VUw-jc-0yf" firstAttribute="trailing" secondItem="ZYf-tX-QEF" secondAttribute="trailing" constant="40" id="53k-Zg-KW1"/>
                             <constraint firstItem="NV7-31-ou2" firstAttribute="top" secondItem="VUw-jc-0yf" secondAttribute="top" constant="14" id="7xj-n4-Z3L"/>
                             <constraint firstItem="NV7-31-ou2" firstAttribute="leading" secondItem="ZYf-tX-QEF" secondAttribute="leading" id="FXU-Tf-ikS"/>
+                            <constraint firstItem="0XM-y9-sOw" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leading" constant="50" id="Lx5-Ia-EeZ"/>
+                            <constraint firstAttribute="trailing" secondItem="0XM-y9-sOw" secondAttribute="trailing" constant="50" id="P2p-zz-ER8"/>
                             <constraint firstItem="ZYf-tX-QEF" firstAttribute="top" secondItem="NV7-31-ou2" secondAttribute="bottom" constant="16" id="TRc-wT-vmJ"/>
                             <constraint firstItem="0XM-y9-sOw" firstAttribute="centerX" secondItem="VUw-jc-0yf" secondAttribute="centerX" id="bJh-fx-5oB"/>
                             <constraint firstItem="0XM-y9-sOw" firstAttribute="top" secondItem="ZYf-tX-QEF" secondAttribute="bottom" constant="20" id="cbG-KS-yOV"/>
