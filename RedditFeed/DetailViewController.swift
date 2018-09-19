@@ -11,13 +11,20 @@ import UIKit
 class DetailViewController: UIViewController {
 
     @IBOutlet weak var detailDescriptionLabel: UILabel!
-
-
+    @IBOutlet weak var usernameLbl: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
+    
     func configureView() {
         // Update the user interface for the detail item.
         if let detail = detailItem {
             if let label = detailDescriptionLabel {
                 label.text = detail.title
+            }
+            if let usernameLbl = usernameLbl {
+                usernameLbl.text = detail.author
+            }
+            if let imageView = imageView {
+                imageView.download(from: detail.thumbnailUrl)
             }
         }
     }
@@ -33,7 +40,7 @@ class DetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    var detailItem: Feed? {
+    var detailItem: FeedDataModel? {
         didSet {
             // Update the view.
             configureView()

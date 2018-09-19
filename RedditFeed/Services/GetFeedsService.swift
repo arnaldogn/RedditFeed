@@ -8,14 +8,15 @@
 
 import Foundation
 
-typealias FeedsCompletion = (FeedBase?, Error?) -> ()
+typealias FeedBaseCompletion = (FeedBase?, Error?) -> ()
+typealias FeedCompletion = ([Feed]?, Error?) -> ()
 
 protocol GetFeedsServiceProtocol {
-    func fetchTop(completion: @escaping FeedsCompletion)
+    func fetchTop(completion: @escaping FeedBaseCompletion)
 }
 
 struct GetFeedsService: GetFeedsServiceProtocol {
-    internal func fetchTop(completion: @escaping FeedsCompletion) {
+    internal func fetchTop(completion: @escaping FeedBaseCompletion) {
         APIManager.shared.request(url: Constants.Url.top, completion: completion)
     }
 }

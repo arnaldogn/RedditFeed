@@ -8,7 +8,11 @@
 
 import Foundation
 
-class FeedsManager: NSObject {
+protocol FeedsManagerProtocol {
+    func loadFeeds(_ completion: @escaping FeedCompletion)
+}
+
+class FeedsManager: NSObject, FeedsManagerProtocol {
     let service: GetFeedsServiceProtocol
     
     init(service: GetFeedsServiceProtocol) {
@@ -16,7 +20,7 @@ class FeedsManager: NSObject {
         super.init()
     }
     
-    func loadFeeds(_ completion: @escaping ([Feed]?, Error?)->()) {
+    func loadFeeds(_ completion: @escaping FeedCompletion) {
         service.fetchTop { (response, error) in
             guard let response = response else { return completion(nil, error) }
             let feeds = response.data.children.compactMap { $0.data }

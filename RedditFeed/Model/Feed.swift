@@ -22,4 +22,16 @@ struct FeedChildren: Decodable {
 
 struct Feed: Decodable {
     let title: String
+    let thumbnail: String
+    let author: String
+    let created: Date
+    let numComments: Int
+    
+    enum CodingKeys: String, CodingKey {
+        case title
+        case thumbnail
+        case author
+        case created
+        case numComments = "num_comments"
+    }
 }
