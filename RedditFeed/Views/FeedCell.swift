@@ -37,4 +37,9 @@ class FeedCell: UITableViewCell {
     @IBAction func buttonTapped(_ sender: Any) {
         delegate?.dismissTapped(index: tag)
     }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        thumbnail.image = nil
+    }
 }
