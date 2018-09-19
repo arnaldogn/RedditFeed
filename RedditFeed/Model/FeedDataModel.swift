@@ -21,9 +21,12 @@ struct FeedDataModel {
         return feed.thumbnail
     }
     var createdDate: String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd"
-        return formatter.string(from: feed.created)
+        let calendar = NSCalendar.current
+        let date1 = calendar.startOfDay(for: feed.created)
+        let date2 = calendar.startOfDay(for: Date())
+        let components = calendar.dateComponents([.hour], from: date2, to: date1)
+        guard let hours = components.hour else { return "" }
+        return "\(String(hours)) hours ago"
     }
     var commentsCount: String {
         return "\(String(feed.numComments)) \("comments".localized)"

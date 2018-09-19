@@ -13,19 +13,18 @@ protocol FeedsManagerProtocol {
 }
 
 class FeedsManager: NSObject, FeedsManagerProtocol {
-    let service: GetFeedsServiceProtocol
+    private let service: GetFeedsServiceProtocol
     
     init(service: GetFeedsServiceProtocol) {
         self.service = service
         super.init()
     }
     
-    func loadFeeds(_ completion: @escaping FeedCompletion) {
+    internal func loadFeeds(_ completion: @escaping FeedCompletion) {
         service.fetchTop { (response, error) in
             guard let response = response else { return completion(nil, error) }
             let feeds = response.data.children.compactMap { $0.data }
             completion(feeds, nil)
         }
     }
-    
 }

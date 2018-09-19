@@ -14,6 +14,7 @@ struct FeedBase: Decodable {
 
 struct FeedData: Decodable {
     let children: [FeedChildren]
+    let after: String?
 }
 
 struct FeedChildren: Decodable {
@@ -31,7 +32,7 @@ struct Feed: Decodable {
         case title
         case thumbnail
         case author
-        case created
+        case created = "created_utc"
         case numComments = "num_comments"
     }
 }

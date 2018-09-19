@@ -18,6 +18,7 @@ extension UIImageView {
                 let data = data, error == nil,
                 let image = UIImage(data: data)
                 else { return }
+            UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
             DispatchQueue.main.async() {
                 self.image = image
             }

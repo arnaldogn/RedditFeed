@@ -55,6 +55,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		236029A62152C716006D2C0B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2366216D2151938500B4E6F5 /* MasterViewController.swift */,
+				2366216F2151938500B4E6F5 /* DetailViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		236029A72152D988006D2C0B /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				2366217F215194FC00B4E6F5 /* APIManager.swift */,
+				236621892151A64100B4E6F5 /* FeedsManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		2366215F2151938500B4E6F5 = {
 			isa = PBXGroup;
 			children = (
@@ -78,16 +96,14 @@
 				23662181215198AF00B4E6F5 /* Services */,
 				2366218D2151BCDD00B4E6F5 /* Views */,
 				236621902152A7A200B4E6F5 /* Extensions */,
-				2366216D2151938500B4E6F5 /* MasterViewController.swift */,
+				236029A62152C716006D2C0B /* Controllers */,
+				236029A72152D988006D2C0B /* Managers */,
 				2366216B2151938500B4E6F5 /* AppDelegate.swift */,
-				236621892151A64100B4E6F5 /* FeedsManager.swift */,
-				2366216F2151938500B4E6F5 /* DetailViewController.swift */,
 				2366218721519D7A00B4E6F5 /* Constants.swift */,
 				236621712151938500B4E6F5 /* Main.storyboard */,
 				236621742151938600B4E6F5 /* Assets.xcassets */,
 				236621762151938600B4E6F5 /* LaunchScreen.storyboard */,
 				236621792151938600B4E6F5 /* Info.plist */,
-				2366217F215194FC00B4E6F5 /* APIManager.swift */,
 			);
 			path = RedditFeed;
 			sourceTree = "<group>";
